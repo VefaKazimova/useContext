@@ -1,0 +1,30 @@
+.Footer{
+    background-color: #d8b5e4;
+    width: 100%;
+    padding: 5px 0 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row,
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,100%,.82), 0 2px 16px 0 #fff;
+    color: rgba(0,0,0,.8);
+    font-size: 40px;
+    margin: 10px;
+    padding: 5px;
+    transition: color .2s,box-shadow 1s;
+}
