@@ -4,16 +4,13 @@ export const MainProvider = createContext(null);
 
 const ContextProvider = ({ children }) => {
   const [color, setColor] = useState("");
-  const [borderColor, setBorderColor] = useState("black");
 
   const changeColor = (newColor) => {
     setColor(newColor);
-    setBorderColor(newColor); 
   };
 
   const contextValues = {
     color,
-    borderColor,
     changeColor,
   };
 

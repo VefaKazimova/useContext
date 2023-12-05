@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { MainProvider } from "../context/contextProvider.jsx";
 import { useContext } from "react";
 const Form = () => {
-  const { color, borderColor, changeColor } = useContext(MainProvider);
+  const { color,changeColor } = useContext(MainProvider);
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [search, setSearch] = useState("");
   const [cards, setCards] = useState([]);
   const handleChange = () => {
-    const newCard = { title, text, color: borderColor };
-
-    setCards([...cards, newCard]);
-
+    const newCard = { title, text, color };
+    if(title!="" && text!=""){
+      setCards([...cards, newCard]);
+    }
+  
     setTitle("");
     setText("");
   };
@@ -172,7 +173,7 @@ const handleDelete = (index) => {
             width: "12rem",
             height: "10rem",
             padding: "5px",
-            border: `2px solid ${borderColor}`,
+            border: `2px solid ${color}`,
             marginBottom: "10px",
             borderRadius: "10%",
             textAlign: "center",
